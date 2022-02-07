@@ -1,0 +1,10 @@
+type = "container"
+build = """
+    FROM golang:onbuild
+    WORKDIR /app
+    COPY stress.go ./
+    RUN go build stress.go
+"""
+
+run-cmd = ["sleep", "infinity"]
+run-writable-file-system = true
