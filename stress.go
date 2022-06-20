@@ -4,7 +4,7 @@ import (
 	"time"
 )
 
-func stress() {
+func main() {
 	for {
 		for start := time.Now(); time.Since(start) < 10*time.Second; {
 		}
